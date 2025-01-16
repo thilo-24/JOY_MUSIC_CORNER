@@ -1,0 +1,542 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    background-image:url(images/bg5.png);
+    height: ;
+    width: ;
+    
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*-------------------------------------------------------------
+
+/* Header Styling */
+.header {
+    background-color: rgb(0, 0, 0);
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Changed from fixed to relative */
+    z-index: 1000;
+    
+}
+
+.logo {
+    flex-grow: 1; /* Ensures the logo takes available space */
+    display: flex;
+    justify-content: flex-start; /* Aligns logo to the left */
+}
+
+/* Logo Styling */
+.logo img {
+    height: 190px;
+    width: 175%;
+    
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+/* Navbar Link Styles */
+.navbar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a i {
+    margin-right: 8px; /* Adjust icon space */
+    font-size: 22px;
+}
+
+/* Navbar Hover Effects */
+.navbar a:hover {
+    background-color: #c547ff;
+    color: #fff;
+    transform: scale(1.05);  /* Slightly increase size for better interaction */
+}
+
+/* Remove Sticky Navbar Shadow Effect */
+.header.sticky {
+    box-shadow: none; /* Removed sticky shadow */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px; /* Adjust maximum width as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.slider-buttons {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-buttons button {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider-buttons button:hover {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+.section {
+    padding: 50px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content {
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    background-color:  rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: bold;
+    color: #c547ff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #82e7f4;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #42cfe5;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+}
+
+.credit a {
+    color: #333;
+}
+
+.credit a:hover {
+    color: #ff6347;
+}
+
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for Footer */
+.footer-container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Row Style (Ensure columns are aligned) */
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* Column Style */
+.footer-col {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+/* Header inside columns */
+.footer-col h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon before header */
+.footer-col h4 i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+/* Style for list of links */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Link Styling */
+.footer-col a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Icons next to links */
+.footer-col a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Social media links container */
+.social-links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Social media links styling */
+.social-links a {
+    margin-bottom: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* Footer text */
+footer h5 {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+/* Style for phone, address etc */
+.footer-col span {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+    }
+
+    .footer-col {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Wrapper for the slider with curved border */
+  .curved-logo-slider {
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 20px; /* Adds curved corners */
+    border: 2px solid #ddd; /* Adds a border for style */
+    background-color:  rgba(255, 255, 255, 0.5);
+    padding: 30px 0;
+    position: relative;
+    width: 95%; /* Increased width */
+    
+}
+
+/* Track holding the logos */
+.logo-slider-track {
+    width: 270%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    animation: scroll 30s linear infinite; /* Slowed down animation */
+    white-space: nowrap;
+}
+
+/* Individual logos */
+.logo-slider-track img {
+    width: 150px;
+    height: auto;
+    margin: 0 20px; /* More space between logos */
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.logo-slider-track img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Smooth looping effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures track does not overlap buttons */
+}
+
+
+
+/* Highlight the middle logo when it comes into focus */
+.highlight-middle {
+    animation: pop 0.5s forwards ease-in-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.9;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Updated Services Container CSS */
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-between; /* Align items with space between them */
+    gap: 25px; /* Space between each service box */
+    transition: transform 0.5s ease-in-out;
+    margin-top: 20px; /* Margin added for spacing from the header */
+  }
+  
+  /* Updated Service Box */
+  .service-box {
+    flex: 0 0 23%; /* Adjusted width for 4 items per row (100% / 4 = 25%, with gap = 23%) */
+    height: 330px; /* Fixed height for uniform boxes */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #f8f8f8;
+    display: flex; /* Ensuring the text and image align properly */
+    justify-content: center; /* Centering text horizontally */
+    align-items: center; /* Centering text vertically */
+  }
+  
+  /* Hover effect */
+  .service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Service Box Text Overlay */
+  .service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Hide overlay initially */
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+  
+  /* Show overlay details on hover */
+  .service-box:hover .service-overlay {
+    opacity: 1; /* Make the overlay appear when hovered */
+  }
+  
+  /* Styling for Service Heading */
+  .service-overlay h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff; /* White text for readability */
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for Service Description */
+  .service-overlay p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ddd; /* Lighter text color */
+    line-height: 1.5;
+    text-align: center; /* Ensures description text stays centered */
+  }
+  

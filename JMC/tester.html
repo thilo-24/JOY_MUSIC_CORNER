@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Curved Logo Slider</title>
+    <style>
+        /* Wrapper for the slider with curved border */
+        .curved-logo-slider {
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 20px; /* Adds curved corners */
+            border: 2px solid #ddd; /* Adds a border for style */
+            background-color: #f9f9f9;
+            padding: 30px 0;
+            position: relative;
+            width: 95%; /* Increased width */
+            height:;
+        }
+
+        /* Track holding the logos */
+        .logo-slider-track {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            animation: scroll 30s linear infinite; /* Slowed down animation */
+            white-space: nowrap;
+        }
+
+        /* Individual logos */
+        .logo-slider-track img {
+            width: 150px;
+            height: auto;
+            margin: 0 20px; /* More space between logos */
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .logo-slider-track img:hover {
+            transform: scale(1.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        /* Smooth looping effect */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Navigation buttons */
+        .navigation-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none; /* Ensures track does not overlap buttons */
+        }
+
+       
+        
+        /* Highlight the middle logo when it comes into focus */
+        .highlight-middle {
+            animation: pop 0.5s forwards ease-in-out;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0.9;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="curved-logo-slider">
+       
+        <!-- Scrolling track for logos -->
+        <div class="logo-slider-track">
+            <img src="images/l1.webp" alt="Brand 1">
+            <img src="images/l2.png" alt="Brand 2">
+            <img src="images/l3.webp" alt="Brand 3">
+            <img src="images/l4.webp" alt="Brand 4">
+            <img src="images/l5.webp" alt="Brand 5">
+            <img src="images/l6.webp" alt="Brand 6">
+            <img src="images/l7.png" alt="Brand 7">
+            <img src="images/l8.webp" alt="Brand 8">
+            <!-- Clone logos for seamless effect -->
+            <img src="images/l9.png" alt="Brand 1 Clone">
+            <img src="images/l10.webp" alt="Brand 2 Clone">
+            <img src="images/l11.png" alt="Brand 3 Clone">
+            <img src="images/l12.png" alt="Brand 4 Clone">
+            <img src="images/l13.png" alt="Brand 4 Clone">
+            <img src="images/l14.png" alt="Brand 4 Clone">
+
+                  
+            
+        </div>
+    </section>
+
+    <script>
+        const track = document.querySelector('.logo-slider-track');
+        const logos = document.querySelectorAll('.logo-slider-track img');
+        const trackWidth = track.scrollWidth; // Get full width of track
+        let offset = 0;
+
+        // Function to move to the next slide
+        function nextSlide() {
+            if (offset <= -trackWidth / 2) {
+                offset = 0; // Reset to start when end is reached
+            }
+            offset -= 200; // Scroll 200px to the left
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Function to move to the previous slide
+        function prevSlide() {
+            if (offset >= 0) {
+                offset = -trackWidth / 2; // Go to end if start is reached
+            }
+            offset += 200; // Scroll 200px to the right
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Highlight middle logo effect
+        function highlightMiddleLogo() {
+            const middleLogoIndex = Math.floor(logos.length / 2);
+            logos.forEach((logo, index) => {
+                logo.classList.toggle('highlight-middle', index === middleLogoIndex);
+            });
+        }
+
+        // Infinite looping animation
+        function autoScroll() {
+            if (offset <= -trackWidth / 2) {
+                offset = 0; // Reset to start when end is reached
+            }
+            offset -= 2; // Gradual movement for smooth scrolling
+            track.style.transform = `translateX(${offset}px)`;
+
+            // Periodically check for middle logo to highlight
+            if (Math.abs(offset) % 200 === 0) highlightMiddleLogo();
+
+            requestAnimationFrame(autoScroll); // Continuously call autoScroll
+        }
+
+        autoScroll(); // Start auto-scrolling
+    </script>
+
+</body>
+</html>

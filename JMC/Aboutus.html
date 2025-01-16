@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Joy Music Corner</title>
+        <link rel="stylesheet" href="home.css">
+        <!-- Font Awesome CDN for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script defer src="script.js"></script>
+    </head>
+    
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/JOY.gif" alt="Joy Music Corner Logo" class="img-responsive">
+        </div>
+        <nav class="navbar">
+            <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
+            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+            <a href="products.html"><i class="fas fa-guitar"></i> Products</a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contactus.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+    </header>
+    
+
+
+    <style>
+     
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        /* Story Section */
+        .story-section {
+            background-color:rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .story-section img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .story-section p {
+            display: none;
+        }
+
+        .story-section button {
+            padding: 10px 20px;
+            background-color: #4c56af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .story-section button:hover {
+            background-color: #4566a0;
+        }
+
+        /* Team Section */
+        .team-section {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .team-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .team-card img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .team-card h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .team-card p {
+            margin-top: 10px;
+        }
+
+        /* Certificate Section */
+        .certificate-section {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.certificate {
+    position: relative;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+    
+
+        .certificate-icon {
+    background-image: url('https://psb-planningcanada.ca/wp-content/uploads/2019/01/accredited_92386558-stock-illustration-accredited-gold-certificate.jpg'); /* Example icon URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
+}
+
+.signature {
+    margin-top: 20px;
+    font-family: 'Cursive', sans-serif;
+}
+
+.signature #signature-img {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    background-image: url('https://t3.ftcdn.net/jpg/09/25/47/06/360_F_925470660_LzHJcqlf8CDG9v3ZUCbAj4WwjLETFq2L.jpg'); /* Example signature URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px auto;
+}
+
+        /* Awards Section */
+        .awards-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .awards-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .award-cards {
+          
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .award-card {
+            width: 45%;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .award-card img {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .award-card p {
+            font-size: 0.9em;
+        }
+
+        .icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.icon {
+    text-align: center;
+    font-size: 60px; /* Larger icon size */
+    color: #ff5722; /* Use a color that suits your design */
+    transition: transform 0.3s, color 0.3s; /* Smooth hover effects */
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Slight zoom-in effect on hover */
+    color: #d32f2f; /* Change color on hover */
+}
+
+/* Optional: Add some spacing between the icons */
+.icons .icon:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* Add a background or shape to make the icons stand out */
+.icon::after {
+    content: '';
+    display: block;
+    margin-top: 8px;
+    width: 48px;
+    height: 4px;
+    background: #ff5722; /* Match the icon color */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icon:hover::after {
+    opacity: 1; /* Show line on hover */
+}
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const readMoreButton = document.querySelector(".story-section button");
+            const hiddenContent = document.querySelector(".story-section p");
+
+            readMoreButton.addEventListener("click", () => {
+                if (hiddenContent.style.display === "none") {
+                    hiddenContent.style.display = "block";
+                    readMoreButton.innerText = "Read Less";
+                } else {
+                    hiddenContent.style.display = "none";
+                    readMoreButton.innerText = "Read Me";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<br>
+<br>
+
+<div class="container">
+    <!-- Story Section -->
+    <section class="story-section">
+        <h2>Our Story</h2><br>
+        <img src="images/mama.jpg" alt="Company Image" >
+        <p style="display: none;">Starting from a small corner store in 1990, Joy Music Corner has grown into a global destination for music enthusiasts. Our journey reflects passion, determination, and dedication to delivering high-quality musical instruments and customer satisfaction.
+            Joy Music Corner is your one-stop destination for all things music. We specialize in offering a wide range of high-quality musical instruments, accessories, and services tailored to meet the needs of musicians at all levels. From budding enthusiasts to seasoned professionals, our curated selection caters to a variety of tastes and genres. 
+          
+            Our mission is to inspire creativity and bring people closer to the universal language of music. Beyond selling instruments, we are deeply passionate about fostering a vibrant musical community. Whether you’re learning your first instrument, repairing a cherished one, or searching for the perfect gear, Joy Music Corner is here to provide expert guidance, reliable support, and a memorable experience that empowers you to achieve your musical dreams.
+         <br>
+         At Joy Music Corner, we believe in the power of music to bring people together and transform lives. Founded in [year], we started as a humble initiative to offer high-quality musical instruments to aspiring musicians in our community. Over the years, we’ve grown into a trusted name in the music industry, catering to professionals, hobbyists, and music enthusiasts worldwide. From classic instruments to the latest technological innovations, we’ve built a diverse catalog to meet every musical need.
+        <br>
+        At our core, Joy Music Corner is driven by passion, creativity, and a commitment to excellence. We pride ourselves on providing exceptional customer service, premium products, and a platform for individuals to discover the joy of music. Whether you're just starting your musical journey or looking to enhance your professional setup, our mission is to empower your creativity and inspire greatness.
+        Joy Music Corner isn’t just a store—it’s a community. Our regular workshops, concerts, and collaborations bring musicians and enthusiasts together to learn, share, and celebrate the universal language of music. We actively support local talent and initiatives to promote music education, believing it to be a critical avenue for self-expression and emotional well-being.
+    
+    
+    
+    
+    </p>
+          <br>
+        <br>
+        
+        <button>Read Me</button>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-cards">
+            <div class="team-card">
+                <img src="images/M.T.V (2).png" alt="CEO">
+                <h3>ABILASH</h3>
+                <h4>CEO</h4>
+                <p>Abilash has been the guiding force behind our vision, with expertise in both leadership and innovation.</p>
+            </div>
+            <div class="team-card">
+                <img src="images/foun.png" alt="Founder">
+                <h3>MR.KRISHNAMOORTHY</h3>
+                <h4>Founder</h4>
+                <p>Krishna's relentless pursuit of excellence built Joy Music Corner into what it is today.</p>
+            </div>
+            <div class="team-card">
+                <img src="images/M.T.V (3).png" alt="Executive Manager">
+                <h3>THILOSHAN</h3>
+                <h4>Executive Manager</h4>
+                <p>Thiloshan ensures seamless operations with a keen focus on customer service and quality assurance.</p>
+            </div>
+        </div>
+    </section>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    // Add certification approved icon
+    const iconContainer = document.getElementById("certificate-icon");
+    const approvedSymbol = document.createElement("span");
+    approvedSymbol.innerHTML = "&#128275;"; // Unicode for a lock symbol to signify approval
+    approvedSymbol.style.fontSize = "30px";
+    approvedSymbol.style.color = "green";
+    approvedSymbol.style.position = "absolute";
+    approvedSymbol.style.top = "-20px";
+    approvedSymbol.style.right = "20px";
+    iconContainer.appendChild(approvedSymbol);
+
+    // Add the signature dynamically
+    const signatureContainer = document.getElementById("signature-img");
+    signatureContainer.style.borderBottom = "2px solid black";
+    signatureContainer.style.width = "150px";
+    signatureContainer.style.margin = "10px auto";
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- Certificate Section -->
+    <section class="certificate-section">
+        <h2>Our Certification</h2><br>
+    
+            <div class="certificate">
+                <div id="certificate-icon" class="certificate-icon"></div>
+                <h2>Company Registration Certificate</h2>
+                <p>Registration Number: 200330912421</p>
+                <p>Registered Office: JOY MUSIC CORNER , BATTICALOA</p>
+                <p>Date of Registration: Jan 15, 1990</p>
+                <p><b>License Approved by Global Music Authority</b></p>
+                <div id="signature" class="signature">
+                    <p>Approved by:</p>
+                    <span id="signature-img"></span>
+                </div>
+            </div>
+        </section>
+        
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards-section">
+        <h2>Awards & Achievements</h2>
+        <div class="award-cards">
+            <div class="award-card">
+                <img src="images/mm.png" alt="Award 2021">
+                <h3>Best Music Store 2021</h3>
+                <p>Awarded for outstanding customer satisfaction and innovative products.</p>
+            </div>
+            <div class="award-card">
+                <img src="images/yy.png" alt="Award 2022">
+                <h3>Excellence in Quality 2022</h3>
+                <p>Honored for exceptional commitment to quality in musical instruments.</p>
+            </div>
+            <div class="award-card">
+              <img src="images/uu.png" alt="Award 2023">
+              <h3>Innovation in Music Retail 2023</h3>
+            <p>Praised for creative store design and interactive shopping experiences.</p>
+          </div>
+          <div class="award-card">
+            <img src="images/M.T.V (4).png" alt="Award 2024">
+            <h3>Global Excellence in Music Industry 2024</h3>
+            <p>Awarded for exemplary contributions to global music markets and emerging talent support.</p>
+        </div>
+        </div>
+        <section>
+            <h2>Enhance Your Experience</h2>
+            <div class="icons">
+                <div class="icon">&#127911;</div>
+                <div class="icon">&#127926;</div>
+                <div class="icon">&#128187;</div>
+            </div>
+        </section>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4><i class="fas fa-user-circle"></i> My Account</h4>
+                    <ul>
+                        <li><a href="account.php?type=acc"><i class="fas fa-cogs"></i> Edit Account</a></li>
+                        <li><a href="cart.php"><i class="fas fa-shopping-cart"></i> View Cart</a></li>
+                        <li><a href="account.php?type=addr"><i class="fas fa-map-marker-alt"></i> Edit Address</a></li>
+                        <li><a href="account.php"><i class="fas fa-box"></i> Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.php"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="private_policy.php"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="products.php"><i class="fas fa-guitar"></i> Products</a></li>
+                        <li><a href="index.php#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/jmc-brand"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://t.me/jmc_support"><i class="fab fa-telegram"></i> Telegram</a>
+                        <a href="https://facebook.com/jmc-brand"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://instagram.com/jmc-brand"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4><i class="fas fa-info-circle"></i> Company Info</h4>
+                    <ul>
+                        <li><a href="aboutus.html"><i class="fas fa-building"></i> About Us</a></li>
+                        <li><a href="careers.html"><i class="fas fa-briefcase"></i> Careers</a></li>
+                        <li><a href="terms_of_service.html"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><i class="fas fa-clock"></i> Opening Hours</h4>
+                    <ul>
+                        <li><span>Mon - Fri:</span> 9:00 AM - 8:00 PM</li>
+                        <li><span>Sat - Sun:</span> 10:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h5 align="center">
+                Copyright © 2025 Joy Music Corner. All Rights Reserved.
+            </h5>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

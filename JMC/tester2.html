@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Music Corner - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Base reset */
+      
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2rem;
+            color: #444;
+        }
+
+        .cart-items {
+            width: 90%;
+            margin: 20px auto;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 12px;
+        }
+
+        th {
+            background: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        form button {
+            margin: 2px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/JOY.gif" alt="Joy Music Corner Logo" class="img-responsive" style="height: 50px;">
+        </div>
+        <nav class="navbar">
+            <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
+            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+            <a href="products.html"><i class="fas fa-guitar"></i> Products</a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contactus.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+    </header>
+
+    <h1>Your Cart</h1>
+    <div class="cart-items">
+        <?php if (!empty($_SESSION['cart'])): ?>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($_SESSION['cart'] as $key => $item): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($item['name']); ?></td>
+                            <td>$<?php echo number_format($item['price'], 2); ?></td>
+                            <td><?php echo $item['quantity']; ?></td>
+                            <td>
+                                <form method="post" action="">
+                                    <input type="hidden" name="key" value="<?php echo $key; ?>">
+                                    <button type="submit" name="delete">Delete</button>
+                                    <button type="submit" name="increase">Increase</button>
+                                    <button type="submit" name="decrease">Decrease</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <div style="text-align: center;">
+                <form method="post" action="">
+                    <button type="submit" name="buy_now">Buy Now</button>
+                </form>
+            </div>
+        <?php else: ?>
+            <p>Your cart is empty.</p>
+        <?php endif; ?>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>My Account</h4>
+                <ul>
+                    <li><a href="account.php">Edit Account</a></li>
+                    <li><a href="cart.html">View Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">© 2025 Joy Music Corner</div>
+    </footer>
+</body>
+</html>

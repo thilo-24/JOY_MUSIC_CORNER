@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Joy Music Corner</title>
+        <link rel="stylesheet" href="home.css">
+        <!-- Font Awesome CDN for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script defer src="script.js"></script>
+    </head>
+    
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/JOY.gif" alt="Joy Music Corner Logo" class="img-responsive">
+        </div>
+        <nav class="navbar">
+            <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
+            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+            <a href="products.html"><i class="fas fa-guitar"></i> Products</a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contactus.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+    </header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+    
+
+
+
+    .products-section {
+        max-width: 90%;
+        margin: 50px auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+
+
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+  
+      .product-box {
+        flex: 0 0 23%;
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        background-color: #f8f8f8;
+      }
+  
+      .product-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+      }
+  
+      .product-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+  
+      .product-box:hover .product-content {
+        opacity: 1;
+      }
+  
+      .product-content h3,
+      .product-content p {
+        color: #fff;
+        text-align: center;
+        margin: 10px 0;
+      }
+  
+      .product-content button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #2575fc;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+  
+      .product-content button:hover {
+        background: #6a11cb;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <section class="products-section">
+
+        <!-- Headphone Products -->
+        <h2>Headphones</h2> <br>
+        <div class="products-container">
+          <div class="product-box" style="background-image: url('https://d1b5h9psu9yexj.cloudfront.net/57440/Anker-s-Soundcore-Space-One_20230829-151132_full.jpeg');">
+            <div class="product-content">
+              <h3>Noise-Cancelling Headphones</h3>
+              <h3>12,000 LKR</h3>
+              <p>Immerse yourself in music with active noise cancellation.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://celltronics.lk/wp-content/uploads/2024/02/Baseus-AeQur-G10-True-Wireless-Earbuds.jpg');">
+            <div class="product-content">
+              <h3>True Wireless Earbuds</h3>
+              <h3>8,000 LKR</h3>
+              <p>Seamless connectivity with long battery life.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://tecroot.lk/wp-content/uploads/2023/03/Pro-10-Over-Ear-Wired-Headphones.jpg');">
+            <div class="product-content">
+              <h3>Over-Ear Studio Headphones</h3>
+              <h3>20,000 LKR</h3>
+              <p>High-fidelity audio for professionals.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://shop.zebronics.com/cdn/shop/products/Zeb-Jet-Pro-pic1.jpg?v=1659157507&width=1200');">
+            <div class="product-content">
+              <h3>Gaming Headset Pro</h3>
+              <h3>25,000 LKR</h3>
+              <p>Surround sound with a noise-cancelling mic.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <br>
+    
+        <!-- Speaker Products -->
+        <h2>Speakers</h2><br>
+        <div class="products-container">
+          <div class="product-box" style="background-image: url('https://ptron.in/cdn/shop/files/B0CTR4BXK7.MAIN.jpg?v=1709878984');">
+            <div class="product-content">
+              <h3>Smart Bluetooth Speaker</h3>
+              <h3>7,000 LKR</h3>
+              <p>Voice-activated for hands-free control.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://expertlaois.ie/wp-content/uploads/2024/06/jbl-partybox-encore-or-jblpbencore1micuk__46577.jpg');">
+            <div class="product-content">
+              <h3>Portable Party Speaker</h3>
+              <h3>15,000 LKR</h3>
+              <p>LED lights and deep bass for parties.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://avechi.co.ke/wp-content/uploads/2021/12/LG-SN8Y-440W-3.1.2-Channel-Sound-bar.jpg');">
+            <div class="product-content">
+              <h3>High-Resolution Soundbar</h3>
+              <h3>75,000 LKR</h3>
+              <p>Ultimate sound experience for your TV.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://wish.lk/wp-content/uploads/2023/12/Anker-Soundcore-Motion-Boom-Plus-Portable-Waterproof-Outdoor-Speaker.png');">
+            <div class="product-content">
+              <h3>Waterproof Outdoor Speaker</h3>
+              <h3>12,500 LKR</h3>
+              <p>Durable design with rich sound.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <br>
+    
+        <!-- Piano Products -->
+        <h2>Pianos</h2><br>
+        <div class="products-container">
+          <div class="product-box" style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/61ZwmI8oNPL.jpg');">
+            <div class="product-content">
+              <h3>Smart Grand Piano</h3>
+              <h3>620,000 LKR</h3>
+              <p>Blend tradition with modern features like app connectivity.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://media.musicarts.com/is/image/MMGS7/L47306000000000-01-720x720.jpg');">
+            <div class="product-content">
+              <h3>Digital Stage Piano</h3>
+              <h3>900,000 LKR</h3>
+              <p>Perfect for performances with customizable sounds.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://img.drz.lazcdn.com/static/lk/p/a3f5962d8c1a6a76c47e7e06d3d5ce11.jpg_720x720q80.jpg');">
+            <div class="product-content">
+              <h3>Beginner's Electric Piano</h3>
+              <h3>420,000 LKR</h3>
+              <p>Easy to use and ideal for learning.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://m.media-amazon.com/images/I/71FobkNjTZL._AC_UF894,1000_QL80_.jpg');">
+            <div class="product-content">
+              <h3>Compact Digital Piano</h3>
+              <h3>270,000 LKR</h3>
+              <p>Portable with premium sound quality.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <br>
+    
+        <!-- Guitar Products -->
+        <h2>Guitars</h2><br>
+        <div class="products-container">
+          <div class="product-box" style="background-image: url('https://www.jhs.co.uk/cdn/shop/products/LV36BL_1024x.jpg?v=1665137071');">
+            <div class="product-content">
+              <h3>Smart Electric Guitar</h3>
+              <h3>500,000 LKR</h3>
+              <p>Connects to apps for seamless tuning and effects.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://images.ctfassets.net/m8onsx4mm13s/4sVZTzSsV03FalcqXa7Pxk/cfad09cccf03ee0a1c633dca28be57b8/GG-632AH_front_side.png');">
+            <div class="product-content">
+              <h3>Classic Acoustic Guitar</h3>
+              <h3>820,000 LKR</h3>
+              <p>Rich and full-bodied sound for all musicians.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://cdn11.bigcommerce.com/s-dks6ju/images/stencil/1280x1280/products/3951/383831/00018NAMM_11__16223.1715917188.jpg?c=2');">
+            <div class="product-content">
+              <h3>Travel Acoustic Guitar</h3>
+              <h3>920,000 LKR</h3>
+              <p>Compact design for musicians on the go.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://img-zuhalmuzik.mncdn.com/mnresize/1000/1000/images/product/0972023200_1.jpg');">
+            <div class="product-content">
+              <h3>Hybrid Acoustic-Electric Guitar</h3>
+              <h3>720,000 LKR</h3>
+              <p>Versatile for studio or stage performances.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <br>
+    
+        <!-- Microphone Products -->
+        <h2>Microphones</h2><br>
+        <div class="products-container">
+          <div class="product-box" style="background-image: url('https://destiny-files.com/image/webp_large/LLA3669_1.webp');">
+            <div class="product-content">
+              <h3>USB Podcast Microphone</h3>
+              <h3>20,000 LKR</h3>
+              <p>Crystal-clear audio for streamers and podcasters.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://bowerusa.com/cdn/shop/files/WA-LAPMIC_web_1280x1280.jpg?v=1697569302');">
+            <div class="product-content">
+              <h3>Wireless Lavalier Mic</h3>
+              <h3>30,000 LKR</h3>
+              <p>Perfect for presentations and mobile filming.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://nxtleveltech.co.za/wp-content/uploads/2023/05/AKG20P420High-performance20dynamic20instrument20microphone.jpg');">
+            <div class="product-content">
+              <h3>High-Performance Dynamic Mic</h3>
+              <h3>19,000 LKR</h3>
+              <p>Robust design with unmatched audio quality.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://i0.wp.com/rentitem.lk/wp-content/uploads/2019/01/Web-Image-4.jpg?fit=1000%2C1000&ssl=1');">
+            <div class="product-content">
+              <h3>Studio-Grade Condenser Mic</h3>
+              <h3>200,000 LKR</h3>
+              <p>Delivers rich vocals for music recording.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <br>
+    
+        <!-- Electronic Keyboard Products -->
+        <h2>Electronic Keyboards</h2><br>
+        <div class="products-container">
+          <div class="product-box" style="background-image: url('https://cdn.shopaccino.com/procraftindia/products/dmk-619553_l.jpeg?v=523');">
+            <div class="product-content">
+              <h3>Compact MIDI Keyboard</h3>
+              <h3>320,000 LKR</h3>
+              <p>Essential for music producers and DJs.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://www.smartpiano.co.uk/wp-content/uploads/2020/06/image-shot-the-one-light-keyboard-black-wht-bg.png');">
+            <div class="product-content">
+              <h3>Smart Digital Keyboard</h3>
+              <h3>700,000 LKR</h3>
+              <p>Features customizable effects and virtual lessons.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://cdn11.bigcommerce.com/s-3by9a48r25/images/stencil/1280x1280/products/9950/17905/roland_go_piano_angle__01807.1734547365.jpg?c=1');">
+            <div class="product-content">
+              <h3>Performance Digital Piano</h3>
+              <h3>600,000 LKR</h3>
+              <p>Realistic feel with authentic grand piano sounds.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-box" style="background-image: url('https://www.sensorytoywarehouse.com/wp-content/uploads/cm/catalog/products/playlearn/SKBKeyboard1copy.jpg');">
+            <div class="product-content">
+              <h3>Educational Keyboard</h3>
+              <h3>3,000 LKR</h3>
+              <p>Interactive features for beginners to learn.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <h2>Drums</h2> <br>
+<div class="products-container">
+  <div class="product-box" style="background-image: url('https://pbhmusicgroup.com/cdn/shop/products/1_cf9618af-0686-4b72-8bd0-1942cb843aee.jpg?v=1669528425');">
+    <div class="product-content">
+      <h3>Acoustic Drum Set</h3>
+      <h3>150,000 LKR</h3>
+      <p>Perfect for live performances with premium sound quality.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://www.orchestramegastore.com/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/t/d/td-1kpx2_f_gal.jpg');">
+    <div class="product-content">
+      <h3>Portable Digital Drum Kit</h3>
+      <h3>40,000 LKR</h3>
+      <p>Compact and versatile, ideal for home practice or travel.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://lh6.googleusercontent.com/proxy/ugDR8C3_eFi7Y0HwpTzjMY6elffGMZQCu2rYPuf3LyNy_Hi6vAYXvOcdseeSgUUtmFCgTvZO15208G_TQaFDCbp99OsE6XyYEsPTs-j7kMN1xS_GxfjzXNOBfA');">
+    <div class="product-content">
+      <h3>Acrylic Cocktail Drum Set</h3>
+      <h3>100,000 LKR</h3>
+      <p>Stylish and sleek drums with crystal-clear sound.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://i.sstatic.net/INcSN.jpg');">
+    <div class="product-content">
+      <h3>Wooden Cajon Drum</h3>
+      <h3>25,000 LKR</h3>
+      <p>Lightweight percussion instrument with adjustable snare.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div>
+<br>
+
+<h2>Sound Mixers</h2> <br>
+<div class="products-container">
+  <div class="product-box" style="background-image: url('https://i0.wp.com/rentitem.lk/wp-content/uploads/2019/01/1Web-Image03.jpg?fit=1000%2C1000&ssl=1');">
+    <div class="product-content">
+      <h3>Analog Audio Mixer</h3>
+      <h3>75,000 LKR</h3>
+      <p>Perfect for live gigs with smooth mixing and built-in effects.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://www.bashsmusic.com.au/wp-content/uploads/FLOW8_1.webp');">
+    <div class="product-content">
+      <h3>Digital Mixer with Bluetooth</h3>
+      <h3>120,000 LKR</h3>
+      <p>Feature-packed with Bluetooth and high-quality digital audio.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://rangashopping.lk/wp-content/uploads/2024/12/MCP0274B_1-1.webp');">
+    <div class="product-content">
+      <h3>Compact 6-Channel Mixer</h3>
+      <h3>55,000 LKR</h3>
+      <p>Lightweight and portable, ideal for smaller setups.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://media.musicarts.com/is/image/MMGS7/L69788000000000-00-720x720.jpg');">
+    <div class="product-content">
+      <h3>Professional Mixer with Effects</h3>
+      <h3>85,000 LKR</h3>
+      <p>Integrated effects and seamless control for pro audio mixing.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div><br>
+
+
+<h2>Trumpets</h2> <br>
+<div class="products-container">
+  <div class="product-box" style="background-image: url('https://rvb-img.reverb.com/image/upload/s--CJaaiGM6--/t_large-square/v1589578509/cg7l03t0vwrnzkvz8r53.jpg');">
+    <div class="product-content">
+      <h3>Proline Trumpet</h3>
+      <h3>70,000 LKR</h3>
+      <p>Professional trumpet with a gold lacquer finish.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://www.ripamusic.com/wp-content/uploads/2017/06/IMG_2323-scaled.jpg');">
+    <div class="product-content">
+      <h3>Silver Jazz Trumpet</h3>
+      <h3>85,000 LKR</h3>
+      <p>Elegant silver trumpet designed for jazz performances.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://teds-list.com/wp-content/uploads/2021/01/Jupiter-JTR700Q-Bb-Trumpet-Lacquer3.jpg');">
+    <div class="product-content">
+      <h3>Beginner's Trumpet</h3>
+      <h3>40,000 LKR</h3>
+      <p>Perfect for students and beginner-level players.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://m.media-amazon.com/images/I/51cvtihawxL.jpg');">
+    <div class="product-content">
+      <h3>Orchestra Performance Trumpet</h3>
+      <h3>150,000 LKR</h3>
+      <p>Premium-grade trumpet for orchestral performances.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div><br>
+
+
+
+<h2>Violins</h2> <br>
+<div class="products-container">
+  <div class="product-box" style="background-image: url('https://thumbs.dreamstime.com/b/violin-viola-bowed-musical-instrument-classical-symphony-orchestra-realistic-drawing-isolated-image-white-background-violin-235458524.jpg');">
+    <div class="product-content">
+      <h3>Beginner Violin</h3>
+      <h3>40,000 LKR</h3>
+      <p>Perfect for students, lightweight and easy to use.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://luisandclark.com/wp-content/uploads/2012/01/LuisandClarkVIOLIN_2K.jpg');">
+    <div class="product-content">
+      <h3>Acoustic Violin</h3>
+      <h3>80,000 LKR</h3>
+      <p>Classic design with excellent sound quality for performers.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://classicviolins.com/images/product/medium/ae00-1598.jpg');">
+    <div class="product-content">
+      <h3>Electric Violin</h3>
+      <h3>120,000 LKR</h3>
+      <p>Sleek, modern electric violin for versatile performances.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://5.imimg.com/data5/UD/OI/MY-45334370/professional-musical-wood-violin.jpg');">
+    <div class="product-content">
+      <h3>Professional Violin</h3>
+      <h3>200,000 LKR</h3>
+      <p>Handcrafted masterpiece for professional musicians.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div><br>
+
+<h2>Traditional Instruments</h2> <br>
+<div class="products-container">
+  <div class="product-box" style="background-image: url('https://r2.gear4music.com/media/106/1066581/600/preview.jpg');">
+    <div class="product-content">
+      <h3>Tabla</h3>
+      <h3>25,000 LKR</h3>
+      <p>Classical percussion instrument for Indian music.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://i.pinimg.com/564x/18/36/c4/1836c43331de411e061370d89c7b4d6d.jpg');">
+    <div class="product-content">
+      <h3>Sitar</h3>
+      <h3>60,000 LKR</h3>
+      <p>Elegant string instrument with a mesmerizing tone.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://karumusic.lk/wp-content/uploads/2023/08/455.jpg');">
+    <div class="product-content">
+      <h3>Djembe</h3>
+      <h3>35,000 LKR</h3>
+      <p>Traditional African drum with rich, resonating sound.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-box" style="background-image: url('https://dagnamusic.com/wp-content/uploads/2024/05/harmonium-12500-1-scaled.jpg');">
+    <div class="product-content">
+      <h3>Harmonium</h3>
+      <h3>50,000 LKR</h3>
+      <p>Portable keyboard instrument for devotional and classical music.</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+    
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4><i class="fas fa-user-circle"></i> My Account</h4>
+                    <ul>
+                        <li><a href="account.php?type=acc"><i class="fas fa-cogs"></i> Edit Account</a></li>
+                        <li><a href="cart.php"><i class="fas fa-shopping-cart"></i> View Cart</a></li>
+                        <li><a href="account.php?type=addr"><i class="fas fa-map-marker-alt"></i> Edit Address</a></li>
+                        <li><a href="account.php"><i class="fas fa-box"></i> Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.php"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="private_policy.php"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="products.php"><i class="fas fa-guitar"></i> Products</a></li>
+                        <li><a href="index.php#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/jmc-brand"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://t.me/jmc_support"><i class="fab fa-telegram"></i> Telegram</a>
+                        <a href="https://facebook.com/jmc-brand"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://instagram.com/jmc-brand"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4><i class="fas fa-info-circle"></i> Company Info</h4>
+                    <ul>
+                        <li><a href="aboutus.html"><i class="fas fa-building"></i> About Us</a></li>
+                        <li><a href="careers.html"><i class="fas fa-briefcase"></i> Careers</a></li>
+                        <li><a href="terms_of_service.html"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><i class="fas fa-clock"></i> Opening Hours</h4>
+                    <ul>
+                        <li><span>Mon - Fri:</span> 9:00 AM - 8:00 PM</li>
+                        <li><span>Sat - Sun:</span> 10:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h5 align="center">
+                Copyright © 2025 Joy Music Corner. All Rights Reserved.
+            </h5>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
